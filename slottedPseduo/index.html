@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slootted check</title>
+    <script src="slotted.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>::slotted pseudo-element example</h1>
+
+    <user-card>
+        <div slot="name">morgan stanley</div>
+        <div slot="age">36</div>
+        <div slot="work">accountant</div>
+    </user-card>
+    <user-card>
+        <div slot="name">dr shazaam</div>
+        <div slot="age">limits to infinity</div>
+        <div slot="work">accountant</div>
+    </user-card>
+    <user-card>
+        <div slot="age">immortal</div>
+    </user-card>
+
+    <template>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .card {
+                border: 1px solid black;
+                max-width: max-content;
+                padding: 0.5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                min-height: 150px;
+            }
+
+            ul {
+                padding-left: 1rem;
+            }
+
+            [data-info].closed {
+                display: none;
+            }
+
+            button[data-btn-info] {
+                margin-top: auto;
+            }
+
+            ::slotted(*) {
+                color: gray;
+                font-style: italic;
+            }
+        </style>
+        <div class="card">
+            <h2>Personal ID Card</h2>
+            <div>
+                <slot name="name">name missing</slot>
+            </div>
+            <ul data-info>
+                <li>
+                    <slot name="age">age missing</slot>
+                </li>
+                <li>
+                    <slot name="work">work missing</slot>
+                </li>
+            </ul>
+            <button data-btn-info>hide info</button>
+        </div>
+    </template>
+
+</body>
+
+</html>

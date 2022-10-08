@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup widget </title>
+    <script src="main.js" defer></script>
+    <script src="popup.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            padding: 1rem;
+        }
+
+        .input-area {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Pop-up info widget - web components
+    </h2>
+
+    <div class="input-area">
+        <span>Enter your CVC</span>
+        <custom-popup imgCode="&#8505;">
+            <div slot="text">your card should have 4 digits!! check it man.</div>
+        </custom-popup>
+        <custom-popup imgCode="&#9786;">
+            <div slot="text">smile! secret webcam is watching u rn... =)</div>
+        </custom-popup>
+        <input type="text">
+    </div>
+
+
+</body>
+
+</html>

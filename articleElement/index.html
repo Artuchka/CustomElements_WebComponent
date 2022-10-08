@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>article widget</title>
+    <script src="articleElement.js" defer></script>
+</head>
+
+<body>
+
+    <article-element>
+        <div slot="title">Sample heading</div>
+        <div slot="text1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident animi ullam molestias iure
+            sit distinctio assumenda aliquid, quo illo! Assumenda.
+        </div>
+        <div slot="text2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, nihil magni fuga dignissimos quia nemo
+            voluptas sapiente nostrum alias sunt?
+        </div>
+    </article-element>
+
+    <template>
+        <style>
+            article {
+                display: flex;
+                flex-direction: column;
+                gap: .001rem;
+            }
+
+            article.focused {
+                outline: 3px solid black;
+            }
+
+            slot {
+                display: none;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100px;
+                resize: none;
+                outline: none;
+                border: none;
+            }
+
+
+            textarea[data-title] {
+                height: 3rem;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        </style>
+        <article>
+            <div data-title-container>
+                <slot name="title">
+                </slot>
+                <textarea data-title></textarea>
+            </div>
+            <div data-text1-container>
+                <slot name="text1">
+                </slot>
+                <textarea data-text1></textarea>
+            </div>
+            <div data-text2-container>
+                <slot name="text2">
+                </slot>
+                <textarea data-text2></textarea>
+            </div>
+            <div>
+                word count:
+                <span data-count></span>
+            </div>
+        </article>
+    </template>
+</body>
+
+</html>

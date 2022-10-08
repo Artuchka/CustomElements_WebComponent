@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slot change example</title>
+    <script src="slotchange.js" defer></script>
+</head>
+
+<body>
+    <h1 class="chosen-item">text</h1>
+    <summary-list>
+        <ul slot="list">
+            <li>apple</li>
+            <li>orange</li>
+            <li>pear</li>
+        </ul>
+
+
+        <p data-for="apple">
+            its green and circle-alike
+        </p>
+        <p data-for="orange">
+            its orange and circle!!!
+        </p>
+        <p data-for="pear">
+            its what girls want to be
+        </p>
+
+    </summary-list>
+
+</body>
+
+</html>

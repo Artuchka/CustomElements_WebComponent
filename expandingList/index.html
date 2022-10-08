@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expanding list</title>
+    <script src="expandingList.js" defer></script>
+    <style>
+        body {
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <ul is="expanding-list" class="closed" data-expanding-list>
+        <span>UK</span>
+        <li>
+            <span>yorkshire list</span>
+            <ul>
+                <li>
+                    <span>item1</span>
+                    <ul>
+                        <li>subitem1 for item 1</li>
+                        <li>subitem2 for item 1</li>
+                        <li>subitem3 for item 1</li>
+                        <li>subitem4 for item 1</li>
+                    </ul>
+                </li>
+                <li>item2</li>
+                <li>item3</li>
+            </ul>
+        </li>
+    </ul>
+    <ul is="expanding-list" class="closed" data-expanding-list>
+        <span>UK</span>
+        <li>
+            <span>yorkshire list</span>
+            <ul>
+                <li>
+                    <span>item1</span>
+                    <ul>
+                        <li>subitem1 for item 1</li>
+                        <li>subitem2 for item 1</li>
+                        <li>subitem3 for item 1</li>
+                        <li>subitem4 for item 1</li>
+                    </ul>
+                </li>
+                <li>item2</li>
+                <li>item3</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul>
+        <span>not an expanding list </span>
+    </ul>
+
+
+</body>
+
+</html>
