@@ -11,10 +11,7 @@ https://artuchka.github.io/CustomElements_WebComponent/slotChange/
 https://artuchka.github.io/CustomElements_WebComponent/slotChangeAgain/
 https://artuchka.github.io/CustomElements_WebComponent/slottedPseduo/
 https://artuchka.github.io/CustomElements_WebComponent/traversyUserCard/
-
-will be added:
-https://artuchka.github.io/CustomElements_WebComponent/first/
-https://artuchka.github.io/CustomElements_WebComponent/todolist/
-
+https://artuchka.github.io/CustomElement_elementDetails/
+https://artuchka.github.io/CustomElement_todolist/
 
 ```
